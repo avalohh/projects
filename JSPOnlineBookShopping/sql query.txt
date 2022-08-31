@@ -1,0 +1,51 @@
+create table bookAdmin
+(
+userid varchar(10)primary key,
+pwd varchar(20)not null
+);
+
+insert into bookAdmin values('admin','admin123');
+
+create table bookcustomer
+(
+fname varchar(20)primary key,
+lname varchar(20)not null,
+email varchar(50)not null,
+phone varchar(15)not null,
+gender varchar(10)not null
+);
+
+create sequence bookid start with 1 increment by 1 minvalue 1 maxvalue 999;
+
+create table book
+(
+bookid number(3)primary key,
+name varchar(255)not null,
+author varchar(255)not null,
+category varchar(50)not null,
+stock number(3)not null,
+price decimal(8,2)not null,
+filename varchar(255) NOT NULL,
+path varchar(255) NOT NULL
+);
+
+create sequence orderid start with 1 increment by 1 minvalue 1 maxvalue 999;
+
+create table purchase
+(
+orderid number(3)primary key,
+fname varchar(20)not null,
+email varchar(50)not null,
+bookid number(3)references book(bookid),
+orderdate Date not null,
+quantity number(3)not null,
+totalprice decimal(8,2)not null
+);
+
+create table bookfeedback
+(
+name varchar(50)not null,
+email varchar(100)not null,
+phone number(12)not null,
+feedback varchar(255)not null
+);
