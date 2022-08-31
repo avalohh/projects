@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Add Employee Page</title>
+<style>
+div {
+	text-align:center;
+}
+
+.center {
+	margin-left: auto;
+ 	margin-right: auto;
+}
+
+table {
+	border-collapse:separate;
+	border-spacing: 0 15px;
+}
+
+#empdept{
+	width:170px;
+
+}
+</style>
+</head>
+<body>
+
+<h1 style="text-align:center">Add Employee Page</h1><hr>
+
+<div>
+<br>
+<form action="AddEmpServlet" method="post">
+<table class="center">
+	<tr>
+		<td><label for="empname">Enter Emp Name: </label></td>
+		<td><input type="text" id="empname" name="empname" required></td>
+	</tr>
+	<tr>
+		<td><label for="phone">Enter phone: </label></td>
+		<td><input type="tel" id="phone" name="phone" required></td>
+	</tr>
+	<tr>
+		<td><label for="email">Enter Emp Email: </label></td>
+		<td><input type="email" id="email" name="email" required></td>
+	</tr>
+	<tr>
+		<td><label for="empdept">Select Emp Dept: </label></td>
+		<td><select id="empdept" name="empdept" required>
+			<option value='' disabled selected>Select</option>
+			<option value="Admin">Admin</option>
+			<option value="Account">Account</option>
+			<option value="HR">HR</option>
+			<option value="IT">IT</option>
+			</select></td>
+	</tr>
+	<tr>
+		<td><label for="emprole">Enter Emp Role: </label></td>
+		<td><input type="text" id="emprole" name="emprole" required></td>
+	</tr>
+	<tr>
+		<td colspan="2" style="text-align:center"><input type="submit" value="Add Employee"></td>
+	</tr>
+</table>
+</form>
+</div>
+
+</body>
+</html>

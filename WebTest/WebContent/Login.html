@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Login Page</title>
+<style>
+div {
+	text-align:center;
+}
+</style>
+</head>
+<body>
+
+<h1 style="text-align:center">Login Page</h1><hr>
+
+<div>
+<br>
+<form action="LoginServlet" method="post">
+<label for="usertype">Select User Type: </label>
+<input type="radio" id="employee" name="usertype" value="employee" required>
+<label for="employee">Employee</label>
+<input type="radio" id="employer" name="usertype" value="employer">
+<label for="employer">Employer</label><br><br>
+<label for="username">Enter User ID: </label>
+<input type="text" id="username" name="username" required><br><br>
+<label for="pwd">Enter Password: </label>
+<input type="password" id="pwd" name="pwd" required><br><br>
+<input type="submit" value="Login">
+<input type="reset" value="Clear">
+</form>
+</div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<style>
+body {
+	background-color:LightGray;
+}
+ul {
+  display: inline-block;
+  list-style-type: none;
+  width:1000px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+}
+
+li {
+  display:inline-block;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  text-decoration: none;
+  font-size:20px;
+}
+
+li a:hover {
+  background-color: #111111;
+}
+
+iframe {
+    background-color: rgba(70, 72, 93,0.5);
+    display: block;
+    margin: 0 auto;
+}
+
+div.iframe-container {
+    dsiplay : flex;
+    justify-content : center;
+}
+div.table{
+ 	width:100%;
+    height:20px;
+    text-align: center;
+}
+
+.list {
+  position: relative;
+  
+}
+
+.list li:last-child {
+  position: absolute;
+  right: 0;
+}
+  
+</style>
+<script type="text/javascript" language="JavaScript">
+    if (top.location != self.location) {
+      top.location.href = self.location.href;
+    }
+    
+</script>
+
+<title>Employee Portal</title>
+</head>
+<body>
+
+<h1 style="text-align:center">Employee Portal</h1>
+
+<div class="table">
+<ul class="list">
+	<li><a href="EmpViewProject.html" target="iframe_a">View Project</a></li>
+	<li><a href="logoutServlet" target="iframe_a">Logout</a></li>
+</ul>
+</div>
+
+
+<div class="iframe-container"><br><br><br><br>
+<iframe src="front.html" name="iframe_a" height="450px" width="1000px" title="iframe"></iframe>
+</div>
+</html>

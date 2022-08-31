@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Contact Us Page</title>
+<style>
+.center {
+	margin-left: auto;
+ 	margin-right: auto;
+}
+
+div {
+	text-align:center;
+}
+</style>
+</head>
+<body>
+<h1 style="text-align:center">Contact US</h1><hr>
+
+
+<br>
+<table class="center">
+	<caption style="font-size:200%; color:rgb(107, 91, 206)">Vict HR Company<br><br></caption>
+	
+	<tr>
+		<th>Phone No</th>
+		<td>012-345 6789</td>
+	</tr>
+	<tr>
+		<th>Fax No</th>
+		<td>07-345 6789</td>
+	</tr>
+	<tr>
+		<th>Email</th>
+		<td><a href="victhr@example.com">victhr@example.com</a></td>
+	</tr>
+	<tr>
+		<th>Address</th>
+		<td>
+		Wisma Consplant 2,
+		Unit A304, Level 3
+		No. 7, Jalan SS16/1, 
+		47500 Subang Jaya, 
+		Selangor</td>
+	</tr>
+</table>
+
+<br>
+<div id="googleMap" style="width:100%;height:300px;"></div>
+
+<script>
+function myMap(){
+	var location = {
+			center:new google.maps.LatLng(3.0808760654137965, 101.5835159471997),
+			zoom:16,
+	};
+	var map = new google.maps.Map(document.getElementById("googleMap"),location);
+	var marker = {
+			color:'red',
+			position:new google.maps.LatLng(3.0809865443707674, 101.58314378784853),
+			map:map,
+	}
+}	var myMarker = new google.maps.Marker(marker);
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjabxUqsFcPWiF5WDsugWUQpIcDlovdnQ&callback=myMap"></script>
+
+<br>
+<br>
+<form>
+<table class="center">
+	<caption style="font-size:200%;">Feedback<br><br></caption>
+	
+	<tr>
+		<td><label for="name">Enter Name: </label></td>
+		<td><input type="text" id="name" name="name" required></td>
+	</tr>
+	<tr>
+		<td><label for="email">Enter your Email: </label></td>
+		<td><input type="email" id="email" name="email" required></td>
+	</tr>
+	<tr>
+		<td><label for="phone">Enter phone: </label></td>
+		<td><input type="tel" id="phone" name="phone" required></td>
+	</tr>
+	<tr>
+		<td colspan="2"><textarea name="feedback" rows="7" cols="50">Provide your feedback</textarea></td>
+	</tr>
+	<tr>
+		<td colspan="2" style="text-align:center"><input type="submit" value="Submit"></td>
+	</tr>
+</table>
+</form>
+
+</body>
+</html>
